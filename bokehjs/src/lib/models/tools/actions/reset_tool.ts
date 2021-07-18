@@ -9,6 +9,12 @@ export class ResetToolView extends ActionToolView {
     // reset() issues the RangesUpdate event
     this.plot_view.reset()
   }
+
+  override _doubletap(): void {
+    this.plot_view.reset()
+  }
+
+  event_type = "doubletap" as "doubletap"
 }
 
 export namespace ResetTool {
